@@ -1,1 +1,81 @@
 /*  your css code here. If applicable */
+ body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f0f0f0;
+      margin: 0;
+    }
+
+    .container {
+      text-align: center;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 350px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    #playersForm input {
+      width: 90%;
+      padding: 10px;
+      margin: 5px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    #submit {
+      background: #28a745;
+      color: white;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+
+    #submit:hover {
+      background: #218838;
+    }
+
+    .board {
+      display: none; /* hidden initially */
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 100px);
+      grid-template-rows: repeat(3, 100px);
+      gap: 5px;
+      justify-content: center;
+      margin: 20px auto;
+    }
+
+    .cell {
+      background: #f9f9f9;
+      border: 2px solid #333;
+      font-size: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .cell.taken {
+      cursor: not-allowed;
+    }
+
+    .message {
+      margin: 15px 0;
+      font-size: 18px;
+      font-weight: bold;
+    }
